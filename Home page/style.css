@@ -1,0 +1,238 @@
+/* Reset margin and padding for all elements and set box-sizing to border-box for consistent sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+/* Nav Bar styles */
+nav {
+    height: 60px; /* Set the height of the navigation bar */
+    background-color: #0f1111; /* Set the background color of the navigation bar */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
+    color: white; /* Set the text color to white */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-evenly; /* Distribute items evenly */
+}
+
+/* List items in the navigation bar */
+nav ul li {
+    list-style: none; /* Remove default list styling */
+    display: inline-block; /* Display list items inline */
+    padding: 10px 20px; /* Add padding to list items */
+}
+
+/* Links in the navigation bar */
+nav ul li a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make links bold */
+}
+
+/* Button styles */
+.button {
+    scale: 0.5; /* Scale the button */
+    padding: 0 3em; /* Add padding inside the button */
+    width: 15em; /* Set the width of the button */
+    height: 4em; /* Set the height of the button */
+    background: white; /* Set the background color of the button */
+    color: black; /* Set the text color of the button */
+    border: none; /* Remove border */
+    border-radius: 2em; /* Round the corners of the button */
+    font-size: 1.25em; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1; /* Set z-index for stacking order */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Button hover effect */
+.button:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+/* Button hover effect with pseudo-element */
+.button:hover:after {
+    content: ""; /* Add empty content */
+    background: black; /* Set background color to black */
+    position: absolute; /* Position absolutely */
+    z-index: -1; /* Set z-index for stacking order */
+    left: -20%; /* Position 20% to the left */
+    right: -20%; /* Position 20% to the right */
+    top: 0; /* Position at the top */
+    bottom: 0; /* Position at the bottom */
+    transform: skewX(-45deg) scale(0, 1); /* Skew and scale the element */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+/* Button hover effect with pseudo-element transition */
+.button:hover:after {
+    transform: skewX(-45deg) scale(1, 1); /* Skew and scale the element on hover */
+    -webkit-transition: all 0.5s; /* Add transition effect for WebKit browsers */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+/* Hero section styles */
+.hero-section {
+    background-image: url("images/ant-rozetsky-q-DJ9XhKkhA-unsplash.jpg"); /* Set background image */
+    height: 100vh; /* Set height to full viewport height */
+    background-image: no-repeat; /* Prevent background image from repeating */
+    background-size: cover; /* Cover the entire section with the background image */
+    padding: 0px 100px; /* Add padding to the section */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+/* Hero section heading styles */
+.hero-section h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set font family */
+    font-weight: bolder; /* Make the text bolder */
+    font-size: 64px; /* Set font size */
+    width: 500px; /* Set width */
+}
+
+/* Button styles */
+.btn {
+    scale: 0.5; /* Scale the button */
+    padding: 0 3em; /* Add padding inside the button */
+    width: 15em; /* Set the width of the button */
+    height: 4em; /* Set the height of the button */
+    background: black; /* Set the background color of the button */
+    color: white; /* Set the text color of the button */
+    border: none; /* Remove border */
+    border-radius: 2em; /* Round the corners of the button */
+    font-size: 1.25em; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    position: absolute; /* Position absolutely */
+    z-index: 1; /* Set z-index for stacking order */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Button hover effect */
+.btn:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+/* Button hover effect with pseudo-element */
+.btn:after {
+    content: ""; /* Add empty content */
+    background: white; /* Set background color to white */
+    position: absolute; /* Position absolutely */
+    z-index: -1; /* Set z-index for stacking order */
+    left: -20%; /* Position 20% to the left */
+    right: -20%; /* Position 20% to the right */
+    top: 0; /* Position at the top */
+    bottom: 0; /* Position at the bottom */
+    transform: skewX(-45deg) scale(0, 1); /* Skew and scale the element */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+/* Button hover effect with pseudo-element transition */
+.btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1); /* Skew and scale the element on hover */
+    -webkit-transition: all 0.5s; /* Add transition effect for WebKit browsers */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+/* Box section styles */
+.box-section {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-evenly; /* Distribute items evenly */
+    background-color: #e2e7e6; /* Set background color */
+}
+
+/* Box styles */
+.box {
+    height: 420px; /* Set height */
+    width: 23%; /* Set width */
+    background-color: black; /* Set background color */
+    color: white; /* Set text color */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set font family */
+    font-weight: bold; /* Make the text bold */
+    padding: 20px 0px 15px; /* Add padding */
+    margin-top: 15px; /* Add top margin */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Box image styles */
+.box-img {
+    height: 300px; /* Set height */
+    background-size: cover; /* Cover the entire element with the background image */
+    margin-top: 1rem; /* Add top margin */
+    margin-bottom: 1rem; /* Add bottom margin */
+}
+
+/* Box content styles */
+.box-content {
+    margin-right: 1rem; /* Add right margin */
+    margin-left: 1rem; /* Add left margin */
+}
+
+/* Box content paragraph styles */
+.box-content p {
+    color: #007185; /* Set text color */
+}
+
+/* Footer styles */
+footer {
+    margin-top: 15px; /* Add top margin */
+}
+
+/* First footer panel styles */
+.foot-panel1 {
+    background-color: #0f1111; /* Set background color */
+    color: white; /* Set text color */
+    border-bottom: 0.5px solid white; /* Add bottom border */
+    height: 100px; /* Set height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-evenly; /* Distribute items evenly */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set font family */
+    font-weight: lighter; /* Make the text lighter */
+    font-size: smaller; /* Set font size */
+}
+
+/* Unordered list styles */
+ul {
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Second footer panel styles */
+.foot-panel2 {
+    background-color: #0f1111; /* Set background color */
+    border-bottom: 0.5px solid white; /* Add bottom border */
+    height: 120px; /* Set height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styles */
+.logo {
+    background-image: url(images/ButtonEnter.gif); /* Set background image */
+    background-size: cover; /* Cover the entire element with the background image */
+    height: 100px; /* Set height */
+    width: 120px; /* Set width */
+}
+
+/* Third footer panel styles */
+.foot-panel3 {
+    background-color: #0f1111; /* Set background color */
+    color: white; /* Set text color */
+    height: 80px; /* Set height */
+    font-size: 0.7rem; /* Set font size */
+    text-align: center; /* Center text */
+}
+
+/* Pages section styles */
+.pages {
+    padding-top: 25px; /* Add top padding */
+}
+
+/* Copyright section styles */
+.copyright {
+    padding-top: 5px; /* Add top padding */
+}
