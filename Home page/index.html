@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking Google Fonts for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <!-- Linking SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
@@ -27,6 +31,68 @@
             <h1>WELCOME TO<br><span>A DIVER'S GUIDE TO SHIPWRECKS</span><br>AROUND<br>IRELAND</h1> <!-- Main heading -->
             <button class="btn">EXPLORE</button> <!-- Button with class "btn" -->
         </div>
+    </div>
+
+    <!-- Sliding section -->
+    <div class="explore-lists swiper">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="images/photo-1494493648617-3edda2de6c0f.avif" alt="Card Image" class="card-image">
+                        <p class="badge">See More</p>
+                        <h2 class="card-title">List of Dived Wrecks by Name</h2>
+                        <button class="card-button
+                        material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="images/photo-1551535740-74735c5af161.avif" alt="Card Image" class="card-image">
+                        <p class="badge">See More</p>
+                        <h2 class="card-title">List of All Wrecks by County</h2>
+                        <button class="card-button
+                        material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="images/photo-1558256708-bc39e034b935.avif" alt="Card Image" class="card-image">
+                        <p class="badge">See More</p>
+                        <h2 class="card-title">Latest Updates</h2>
+                        <button class="card-button
+                        material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="images/photo-1629240019271-f7af9519f27c.avif" alt="Card Image" class="card-image">
+                        <p class="badge">See More</p>
+                        <h2 class="card-title">Illustration of Ship Types</h2>
+                        <button class="card-button
+                        material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="images/R.jpeg" alt="Card Image" class="card-image">
+                        <p class="badge">See More</p>
+                        <h2 class="card-title">Terminology Used</h2>
+                        <button class="card-button
+                        material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+
+            <!-- Linking SwiperJS script -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+             <!-- Linking custom script -->
+             <script src="script.js"></script>
     </div>
 
     <!-- Box section with multiple boxes containing content -->
