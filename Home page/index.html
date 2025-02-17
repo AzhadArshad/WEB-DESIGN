@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
+    <section class="main">
     <!-- Header section with navigation bar -->
     <header style="background-color: black;">
         <nav>
-            <h2 style="color: white;">IRISHWRECKSONLINE</h2> <!-- Website title -->
+            <h2 style="color: white; font-weight: 100;">IRISHWRECKSONLINE</h2> <!-- Website title -->
             <ul>
                 <li><a href="#">Home</a></li> <!-- Navigation links -->
                 <li><a href="#">About</a></li>
@@ -29,11 +30,15 @@
     <div class="hero-section">
         <div class="hero-content">
             <h1>WELCOME TO<br><span>A DIVER'S GUIDE TO SHIPWRECKS</span><br>AROUND<br>IRELAND</h1> <!-- Main heading -->
-            <button class="btn">EXPLORE</button> <!-- Button with class "btn" -->
+            <a href= "ireland.html" class="btn"><button class="btn">EXPLORE</button></a> <!-- Button with class "btn" --> 
         </div>
     </div>
+    </section>
+
+    <div class="spacer waves"></div>
 
     <!-- Sliding section -->
+    <section class="slider">
     <div class="explore-lists swiper">
         <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">
@@ -59,7 +64,8 @@
                     <a href="#" class="card-link">
                         <img src="images/photo-1558256708-bc39e034b935.avif" alt="Card Image" class="card-image">
                         <p class="badge">See More</p>
-                        <h2 class="card-title">Latest Updates</h2>
+                        <h2 class="card-title">Latest</h2>
+                        <h2 class="card-title">Updates</h2>
                         <button class="card-button
                         material-symbols-rounded">arrow_forward</button>
                     </a>
@@ -77,7 +83,7 @@
                     <a href="#" class="card-link">
                         <img src="images/R.jpeg" alt="Card Image" class="card-image">
                         <p class="badge">See More</p>
-                        <h2 class="card-title">Terminology Used</h2>
+                        <h2 class="card-title">Terminology Used in this Site</h2>
                         <button class="card-button
                         material-symbols-rounded">arrow_forward</button>
                     </a>
@@ -94,38 +100,7 @@
              <!-- Linking custom script -->
              <script src="script.js"></script>
     </div>
-
-    <!-- Box section with multiple boxes containing content -->
-    <div class="box-section">
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>List of dived Wrecks by Name</h2> <!-- Box heading -->
-                <div class="box-img" style="background-image: url('images/photo-1494493648617-3edda2de6c0f.avif');"></div> <!-- Box image -->
-                <p>See more</p> <!-- Box description -->
-            </div>
-        </div>
-        <div class="box2 box">
-            <div class="box-content">
-                <h2>List of all Wrecks by County</h2> <!-- Box heading -->
-                <div class="box-img" style="background-image: url('images/photo-1551535740-74735c5af161.avif');"></div> <!-- Box image -->
-                <p>See more</p> <!-- Box description -->
-            </div>
-        </div>
-        <div class="box3 box">
-            <div class="box-content">
-                <h2>Latest Updates</h2> <!-- Box heading -->
-                <div class="box-img" style="background-image: url('images/photo-1558256708-bc39e034b935.avif');"></div> <!-- Box image -->
-                <p>See more</p> <!-- Box description -->
-            </div>
-        </div>
-        <div class="box4 box">
-            <div class="box-content">
-                <h2>Illustrations of Ship types</h2> <!-- Box heading -->
-                <div class="box-img" style="background-image: url('images/photo-1629240019271-f7af9519f27c.avif');"></div> <!-- Box image -->
-                <p>See more</p> <!-- Box description -->
-            </div>
-        </div>
-    </div>
+    </section>
   
     <!-- Footer section -->
     <footer>

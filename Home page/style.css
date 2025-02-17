@@ -7,32 +7,40 @@
 
 /* Nav Bar styles */
 nav {
-    height: 60px; /* Set the height of the navigation bar */
+    height: 100px; /* Set the height of the navigation bar */
     background-color: #0f1111; /* Set the background color of the navigation bar */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
     color: white; /* Set the text color to white */
+    letter-spacing: 0.1em; /* Set the letter spacing */
+    text-align: center; /* Center text in the navigation bar */
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
-    justify-content: space-evenly; /* Distribute items evenly */
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+nav h2 {
+    padding-left: 35px; /* Add padding to the heading */
 }
 
 /* List items in the navigation bar */
 nav ul li {
     list-style: none; /* Remove default list styling */
     display: inline-block; /* Display list items inline */
-    padding: 10px 20px; /* Add padding to list items */
+    padding: 35px; /* Add padding to list items */
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Links in the navigation bar */
 nav ul li a {
     color: white; /* Set link color to white */
     text-decoration: none; /* Remove underline from links */
-    font-weight: bold; /* Make links bold */
+    font-size: x-large;
 }
 
 /* Button styles */
 .button {
-    scale: 0.5; /* Scale the button */
+    scale: 0.7; /* Scale the button */
     padding: 0 3em; /* Add padding inside the button */
     width: 15em; /* Set the width of the button */
     height: 4em; /* Set the height of the button */
@@ -55,7 +63,7 @@ nav ul li a {
 /* Button hover effect with pseudo-element */
 .button:hover:after {
     content: ""; /* Add empty content */
-    background: black; /* Set background color to black */
+    background: #007185; /* Set background color to black */
     position: absolute; /* Position absolutely */
     z-index: -1; /* Set z-index for stacking order */
     left: -20%; /* Position 20% to the left */
@@ -95,20 +103,24 @@ nav ul li a {
 
 /* Button styles */
 .btn {
-    scale: 0.5; /* Scale the button */
-    padding: 0 3em; /* Add padding inside the button */
-    width: 15em; /* Set the width of the button */
-    height: 4em; /* Set the height of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 6.5em; /* Set the width of the button */
+    height: 2em; /* Set the height of the button */
     background: black; /* Set the background color of the button */
     color: white; /* Set the text color of the button */
     border: none; /* Remove border */
     border-radius: 2em; /* Round the corners of the button */
-    font-size: 1.25em; /* Set the font size */
-    font-weight: bold; /* Make the text bold */
+    font-size: 1em; /* Set the font size */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     cursor: pointer; /* Change cursor to pointer on hover */
     position: absolute; /* Position absolutely */
     z-index: 1; /* Set z-index for stacking order */
     overflow: hidden; /* Hide overflow content */
+    text-decoration: none;
+    letter-spacing: 0.1em;
 }
 
 /* Button hover effect */
@@ -185,8 +197,8 @@ footer {
 /* First footer panel styles */
 .foot-panel1 {
     background-color: #0f1111; /* Set background color */
-    color: white; /* Set text color */
-    border-bottom: 0.5px solid white; /* Add bottom border */
+    color: #F1E6D7; /* Set text color */
+    border-bottom: 0.5px solid #F1E6D7; /* Add bottom border */
     height: 100px; /* Set height */
     display: flex; /* Use flexbox for layout */
     justify-content: space-evenly; /* Distribute items evenly */
@@ -203,7 +215,7 @@ ul {
 /* Second footer panel styles */
 .foot-panel2 {
     background-color: #0f1111; /* Set background color */
-    border-bottom: 0.5px solid white; /* Add bottom border */
+    border-bottom: 0.5px solid #F1E6D7; /* Add bottom border */
     height: 120px; /* Set height */
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center items horizontally */
@@ -221,7 +233,7 @@ ul {
 /* Third footer panel styles */
 .foot-panel3 {
     background-color: #0f1111; /* Set background color */
-    color: white; /* Set text color */
+    color: #F1E6D7; /* Set text color */
     height: 80px; /* Set height */
     font-size: 0.7rem; /* Set font size */
     text-align: center; /* Center text */
@@ -243,11 +255,11 @@ ul {
     padding: 0;
     box-sizing: border-box;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
-    background: #e2e7e6;
+    min-height: 20vh;
+    background: #F1E6D7;
 }
 
 .card-wrapper {
@@ -350,4 +362,8 @@ ul {
     .card-wrapper .swiper-slide-button {
         display: none;
     }
+}
+
+.card-image {
+    object-fit: cover;
 }
