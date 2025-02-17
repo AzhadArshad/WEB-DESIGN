@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box; /* Ensures consistent sizing */
 }
-
 /* Nav Bar styles */
 nav {
     height: 60px; /* Set the height of the navigation bar */
@@ -29,6 +28,9 @@ nav ul li a {
     text-decoration: none; /* Remove underline from links */
     font-weight: bold; /* Make links bold */
 }
+
+
+
 
 /* Button styles */
 .button {
@@ -179,53 +181,56 @@ nav ul li a {
 
 /* Footer styles */
 footer {
-    margin-top: 15px; /* Add top margin */
+    background: radial-gradient(circle, #222, #000); /* Set background color */
+    color: white; /* Set text color */
 }
 
-/* First footer panel styles */
-.foot-panel1 {
-    background-color: #0f1111; /* Set background color */
-    color: white; /* Set text color */
-    border-bottom: 0.5px solid white; /* Add bottom border */
-    height: 100px; /* Set height */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-evenly; /* Distribute items evenly */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set font family */
-    font-weight: lighter; /* Make the text lighter */
-    font-size: smaller; /* Set font size */
-}
+
 
 /* Unordered list styles */
 ul {
     margin-top: 20px; /* Add top margin */
 }
 
-/* Second footer panel styles */
-.foot-panel2 {
-    background-color: #0f1111; /* Set background color */
-    border-bottom: 0.5px solid white; /* Add bottom border */
-    height: 120px; /* Set height */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+/* footer panel styles */
+.foot-panel{
+    height: 200px; /* Set height */
+    display: flex;  /* Enables flexbox */
+    justify-content: center; /* Centers the divs horizontally */
+
+}
+.foot-box1{ 
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+}
+.foot-box2{ 
+    width: 25%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    font-size: small;
+}
+.foot-box3{ 
+    width: 25%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    font-size: small;
+}
+.foot-box4{ 
+    width: 25%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    font-size: small;
 }
 
-/* Logo styles */
-.logo {
-    background-image: url(images/ButtonEnter.gif); /* Set background image */
-    background-size: cover; /* Cover the entire element with the background image */
-    height: 100px; /* Set height */
-    width: 120px; /* Set width */
-}
-
-/* Third footer panel styles */
-.foot-panel3 {
-    background-color: #0f1111; /* Set background color */
-    color: white; /* Set text color */
-    height: 80px; /* Set height */
-    font-size: 0.7rem; /* Set font size */
-    text-align: center; /* Center text */
-}
 
 /* Pages section styles */
 .pages {
