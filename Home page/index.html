@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
+    <section class="main">
     <!-- Header section with navigation bar -->
     <header style="background-color: black;">
         <nav>
-            <h2 style="color: white;">IRISHWRECKSONLINE</h2> <!-- Website title -->
+            <h2 style="color: white; font-weight: 100;">IRISHWRECKSONLINE</h2> <!-- Website title -->
             <ul>
                 <li><a href="#">Home</a></li> <!-- Navigation links -->
                 <li><a href="#">About</a></li>
@@ -30,12 +31,17 @@
     <div class="hero-section">
         <div class="hero-content">
             <h1>WELCOME TO<br><span>A DIVER'S GUIDE TO SHIPWRECKS</span><br>AROUND<br>IRELAND</h1> <!-- Main heading -->
-            <button class="btn">EXPLORE</button> <!-- Button with class "btn" -->
+            <a href= "ireland.html" class="btn"><button class="btn">EXPLORE</button></a> <!-- Button with class "btn" --> 
         </div>
     </div>
+    </section>
+
+    <div class="spacer waves"></div>
 
     <!-- Sliding section -->
+    <section class="slider">
     <div style="background: linear-gradient(to bottom, #29296b, #4a59e2);" class="explore-lists swiper">
+    <div class="explore-lists swiper">
         <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">
                 <li class="card-item swiper-slide">
@@ -60,7 +66,8 @@
                     <a href="#" class="card-link">
                         <img src="images/photo-1558256708-bc39e034b935.avif" alt="Card Image" class="card-image">
                         <p class="badge">See More</p>
-                        <h2 class="card-title">Latest Updates</h2>
+                        <h2 class="card-title">Latest</h2>
+                        <h2 class="card-title">Updates</h2>
                         <button class="card-button
                         material-symbols-rounded">arrow_forward</button>
                     </a>
@@ -78,7 +85,7 @@
                     <a href="#" class="card-link">
                         <img src="images/R.jpeg" alt="Card Image" class="card-image">
                         <p class="badge">See More</p>
-                        <h2 class="card-title">Terminology Used</h2>
+                        <h2 class="card-title">Terminology Used in this Site</h2>
                         <button class="card-button
                         material-symbols-rounded">arrow_forward</button>
                     </a>
@@ -95,6 +102,28 @@
              <!-- Linking custom script -->
              <script src="script.js"></script>
     </div>
+    </section>
+
+     <!-- Section where the content will be loaded -->
+     <div id="section-container"></div>
+
+     <script>
+         // Function to load the HTML file
+         function loadSection() {
+             fetch('ireland.html')  // Path to the HTML file you want to include
+                 .then(response => response.text())
+                 .then(data => {
+                     document.getElementById('section-container').innerHTML = data;
+                 })
+                 .catch(error => {
+                     console.error('Error loading the section:', error);
+                 });
+         }
+ 
+         // Load the section when the page is ready
+         loadSection();
+     </script>
+ 
   
     <!-- Footer section -->
     <footer>

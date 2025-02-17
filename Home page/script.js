@@ -28,3 +28,4 @@ new Swiper('.card-wrapper', {
         },
     }
   });
+
