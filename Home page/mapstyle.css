@@ -3,6 +3,101 @@
     padding: 0;
 }
 
+/* Nav Bar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px; /* Set the height of the navigation bar */
+    background-color: #0f1111; /* Set the background color of the navigation bar */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
+    color: white; /* Set the text color to white */
+    letter-spacing: 0.1em; /* Set the letter spacing */
+    padding-left: 10px 20px;
+}
+
+.icon {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+nav h2 {
+    padding-left: 10px; /* Add padding to the heading */
+    font-size: 40px;
+    margin-right: 20px;
+    color: white; 
+    font-weight: 100;
+}
+
+.material-symbols-outlined {
+    font-size: 100px !important;
+    color: white;
+    margin-right: 10px;
+    padding-left: 35px;
+}
+
+.menu {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* List items in the navigation bar */
+nav ul li {
+    list-style: none; /* Remove default list styling */
+    display: inline; /* Display list items inline */
+    padding: 35px; /* Add padding to list items */
+}
+
+/* Links in the navigation bar */
+nav ul li a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 25px;
+}
+
+/* Button styles */
+.button {
+    scale: 0.7; /* Scale the button */
+    padding: 0 3em; /* Add padding inside the button */
+    width: 15em; /* Set the width of the button */
+    height: 4em; /* Set the height of the button */
+    background: white; /* Set the background color of the button */
+    color: black; /* Set the text color of the button */
+    border: none; /* Remove border */
+    border-radius: 2em; /* Round the corners of the button */
+    font-size: 1.25em; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1; /* Set z-index for stacking order */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Button hover effect */
+.button:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+/* Button hover effect with pseudo-element */
+.button:hover:after {
+    content: ""; /* Add empty content */
+    background: #007185; /* Set background color to black */
+    position: absolute; /* Position absolutely */
+    z-index: -1; /* Set z-index for stacking order */
+    left: -20%; /* Position 20% to the left */
+    right: -20%; /* Position 20% to the right */
+    top: 0; /* Position at the top */
+    bottom: 0; /* Position at the bottom */
+    transform: skewX(-45deg) scale(0, 1); /* Skew and scale the element */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+/* Button hover effect with pseudo-element transition */
+.button:hover:after {
+    transform: skewX(-45deg) scale(1, 1); /* Skew and scale the element on hover */
+    -webkit-transition: all 0.5s; /* Add transition effect for WebKit browsers */
+    transition: all 0.5s; /* Add transition effect */
+}
+
 .map-container {
     display: flex;
     justify-content: center; /*Center horizontally*/

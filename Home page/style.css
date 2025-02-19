@@ -7,35 +7,54 @@
 
 /* Nav Bar styles */
 nav {
-    height: 100px; /* Set the height of the navigation bar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px; /* Set the height of the navigation bar */
     background-color: #0f1111; /* Set the background color of the navigation bar */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
     color: white; /* Set the text color to white */
     letter-spacing: 0.1em; /* Set the letter spacing */
-    text-align: center; /* Center text in the navigation bar */
+    padding-left: 10px 20px;
+}
+
+.icon {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Distribute items evenly */
 }
 
 nav h2 {
-    padding-left: 35px; /* Add padding to the heading */
+    padding-left: 10px; /* Add padding to the heading */
+    font-size: 40px;
+    margin-right: 20px;
+    color: white; 
+    font-weight: 100;
+}
+
+.material-symbols-outlined {
+    font-size: 70px;
+    color: white;
+    margin-right: 10px;
+    padding-left: 35px;
+}
+
+.menu {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
 }
 
 /* List items in the navigation bar */
 nav ul li {
     list-style: none; /* Remove default list styling */
-    display: inline-block; /* Display list items inline */
+    display: inline; /* Display list items inline */
     padding: 35px; /* Add padding to list items */
-    align-items: center;
-    justify-content: flex-start;
 }
 
 /* Links in the navigation bar */
 nav ul li a {
     color: white; /* Set link color to white */
     text-decoration: none; /* Remove underline from links */
-    font-size: x-large;
+    font-size: 25px;
 }
 
 /* Button styles */
@@ -91,6 +110,18 @@ nav ul li a {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     justify-content: flex-start; /* Align items to the start */
+    position: relative;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(0, 59, 76, 0) 0%, rgba(0, 59, 76, 1) 100%);
+    pointer-events: none;
 }
 
 /* Hero section heading styles */
@@ -107,6 +138,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     padding: 0;
+    scale: 1;
     width: 6.5em; /* Set the width of the button */
     height: 2em; /* Set the height of the button */
     background: black; /* Set the background color of the button */
@@ -149,49 +181,9 @@ nav ul li a {
     transition: all 0.5s; /* Add transition effect */
 }
 
-/* Box section styles */
-.box-section {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: space-evenly; /* Distribute items evenly */
-    background-color: #e2e7e6; /* Set background color */
-}
-
-/* Box styles */
-.box {
-    height: 420px; /* Set height */
-    width: 23%; /* Set width */
-    background-color: black; /* Set background color */
-    color: white; /* Set text color */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set font family */
-    font-weight: bold; /* Make the text bold */
-    padding: 20px 0px 15px; /* Add padding */
-    margin-top: 15px; /* Add top margin */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-/* Box image styles */
-.box-img {
-    height: 300px; /* Set height */
-    background-size: cover; /* Cover the entire element with the background image */
-    margin-top: 1rem; /* Add top margin */
-    margin-bottom: 1rem; /* Add bottom margin */
-}
-
-/* Box content styles */
-.box-content {
-    margin-right: 1rem; /* Add right margin */
-    margin-left: 1rem; /* Add left margin */
-}
-
-/* Box content paragraph styles */
-.box-content p {
-    color: #007185; /* Set text color */
-}
-
 /* Footer styles */
 footer {
-    margin-top: 15px; /* Add top margin */
+    margin-top: 0; /* Add top margin */
 }
 
 /* First footer panel styles */
@@ -259,7 +251,8 @@ ul {
     align-items: center;
     justify-content: center;
     min-height: 20vh;
-    background: #F1E6D7;
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 59, 76, 1) 0%, rgba(240, 229, 211, 1) 20%, rgba(240, 229, 211, 1) 80%, rgba(0, 59, 76, 1) 100%);
 }
 
 .card-wrapper {
@@ -339,8 +332,8 @@ ul {
 }
 
 .card-wrapper .swiper-pagination-bullet {
-    height: 13px;
-    width: 13px;
+    height: 20px;
+    width: 20px;
     opacity: 0.5;
     background: #007185;
 }
@@ -354,7 +347,7 @@ ul {
     margin-top: -35px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .card-wrapper {
         margin: 0 10px 25px;
     }
@@ -366,4 +359,61 @@ ul {
 
 .card-image {
     object-fit: cover;
+}
+
+.swiper-button-next {
+    color: #007185;
+    font-weight: bolder;
+    font-size: 100px;
+    width: 250px;
+    height: 50px;
+}
+
+.swiper-button-prev {
+    color: #007185;
+    font-weight: bolder;
+    font-size: 100px;
+    width: 250px;
+    height: 50px;
+}
+
+.wave1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 226px;
+}
+
+.wave1 .shape-fill {
+    fill: #00394F;
+}
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1739995870 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 185px;
+}
+
+.custom-shape-divider-bottom-1739995870 .shape-fill {
+    fill: #00394F;
 }
