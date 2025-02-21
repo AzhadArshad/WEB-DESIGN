@@ -16,6 +16,8 @@ nav {
     color: white; /* Set the text color to white */
     letter-spacing: 0.1em; /* Set the letter spacing */
     padding-left: 10px 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .icon {
@@ -101,7 +103,7 @@ nav ul li a {
 }
 
 .main {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,6 +142,8 @@ body {
     max-width: 80%;
     padding: 0 20px;
     margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: "Poppins", serif;
 }
 
 .terminology-table .parent-tab {
@@ -159,6 +163,7 @@ body {
     border-radius: 3px;
     position: relative;
     z-index: 99;
+    font-weight: 100;
 }
 
 .terminology-table label span {
@@ -213,4 +218,88 @@ body {
 
 .parent-tab input:checked ~ label .icon i:before {
     content: '\f068';
+}
+
+/* Footer styles */
+footer {
+    background: radial-gradient(circle, #222, #000); /* Set background color */
+    color: white; /* Set text color */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+footer h1 h2 h3 {
+    font-weight: 10px !important;
+    letter-spacing: 0.5;
+}
+
+.material-symbols-outlined {
+    font-size: 100px !important;
+    color: white;
+    margin-right: 10px;
+    padding-left: 35px;
+    padding-right: 20px;
+    margin-top: -10px;
+}
+
+/* Unordered list styles */
+ul {
+    margin-top: 20px; /* Add top margin */
+}
+
+/* footer panel styles */
+.foot-panel{
+    height: 200px; /* Set height */
+    display: flex;  /* Enables flexbox */
+    justify-content: center; /* Centers the divs horizontally */
+
+}
+.foot-box1{ 
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+}
+.foot-box2{ 
+    width: 25%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    font-size: small;
+    align-items: center;
+    text-align: center;
+}
+.foot-box3{ 
+    width: 25%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    font-size: small;
+}
+.foot-box4{ 
+    width: 25%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    font-size: small;
+}
+
+
+/* Pages section styles */
+.pages {
+    padding-top: 25px; /* Add top padding */
+}
+
+/* Copyright section styles */
+.copyright {
+    padding-top: 5px; /* Add top padding */
 }
