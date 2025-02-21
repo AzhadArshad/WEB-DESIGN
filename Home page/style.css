@@ -208,6 +208,7 @@ ul {
     height: 200px; /* Set height */
     display: flex;  /* Enables flexbox */
     justify-content: center; /* Centers the divs horizontally */
+    
 
 }
 .foot-box1{ 
