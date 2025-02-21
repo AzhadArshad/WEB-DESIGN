@@ -16,8 +16,6 @@ nav {
     color: white; /* Set the text color to white */
     letter-spacing: 0.1em; /* Set the letter spacing */
     padding-left: 10px 20px;
-    padding-top: 30px;
-    padding-bottom: 20px;
 }
 
 .icon {
@@ -34,7 +32,7 @@ nav h2 {
 }
 
 .material-symbols-outlined {
-    font-size: 70px;
+    font-size: 80px !important;
     color: white;
     margin-right: 10px;
     padding-left: 35px;
@@ -102,122 +100,110 @@ nav ul li a {
     transition: all 0.5s; /* Add transition effect */
 }
 
-.main {
-    min-height: 100vh;
+.gallery-container {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
     background-image: url(./images/photo-1488278905738-514111aa236c.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
-body {
-    min-height: 100vh;
-}
-
-.terminology-table h1 {
-    background-color: #F1E6D7;
+h1{
+    font-size: 3rem;
+    font-weight: normal;
     color: #F1E6D7;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 65px;
-    text-align: center;
-    padding: 20px 10px;
-    width: 900px;
-    height: auto;
-    border-radius: 50px;
     background-color: #00394f;
-    letter-spacing: 0.025em;
-    font-weight: 100;
-    scale: 0.8;
-    transform: translate(0, 50%);
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    font-family: "Poppins", serif !important;
+}
+
+.image-container {
+    position: relative;
+    width: 250;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#006284, #00394f,#000);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
-    margin-bottom: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.terminology-table {
-    max-width: 80%;
-    padding: 0 20px;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    font-family: "Poppins", serif;
+.image-container:hover .overlay {
+    opacity: 1;
 }
 
-.terminology-table .parent-tab {
-    margin-bottom: 8px;
-    border-radius: 3px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.18);
+/* Footer styles */
+footer {
+    background: radial-gradient(circle, #222, #000); /* Set background color */
+    color: white; /* Set text color */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.terminology-table .parent-tab label, 
-.terminology-table .child-tab label {
-    background: #00394f;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    border-radius: 3px;
-    position: relative;
-    z-index: 99;
-    font-weight: 100;
+footer h1 h2 h3 {
+    font-weight: 10px !important;
+    letter-spacing: 0.5;
 }
 
-.terminology-table label span {
-    color: #F1E6D7;
-    font-size: 18px;
-    font-weight: 500;
-    text-shadow: 0 -1px 1px #00394f;
-
+.material-symbols-outlined {
+    font-size: 100px !important;
+    color: white;
+    margin-right: 10px;
+    padding-left: 35px;
+    padding-right: 20px;
+    margin-top: -10px;
 }
 
-.child-tab label span {
-   font-size: 17px; 
-}
-
-.terminology-table label .icon {
-    position: relative;
-    height: 30px;
-    width: 30px;
-    color: #F1E6D7;
-    font-size: 15px;
-    display: block;
-    background: #00394f;
-    border-radius: 50%;
-    text-shadow: 0 -1px 1px #00394f;
-}
-
-.terminology-table label .icon i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.terminology-table .parent-tab .content {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-} 
-
-.parent-tab input:checked ~ .content {
-    max-height: 100vh;
-}
-
-.terminology-table .parent-tab .content p {
-    font-size: 16px;
-    padding: 15px 20px;
-}
-
-.terminology-table input {
-    display: none;
-}
-
-.parent-tab input:checked ~ label .icon i:before {
-    content: '\f068';
+/* Unordered list styles */
+ul {
+    margin-top: 20px; /* Add top margin */
 }
 
 /* Footer styles */
