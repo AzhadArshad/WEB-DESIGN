@@ -1,0 +1,216 @@
+/* Reset margin and padding for all elements and set box-sizing to border-box for consistent sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+/* Nav Bar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px; /* Set the height of the navigation bar */
+    background-color: #0f1111; /* Set the background color of the navigation bar */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
+    color: white; /* Set the text color to white */
+    letter-spacing: 0.1em; /* Set the letter spacing */
+    padding-left: 10px 20px;
+}
+
+.icon {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+nav h2 {
+    padding-left: 10px; /* Add padding to the heading */
+    font-size: 40px;
+    margin-right: 20px;
+    color: white; 
+    font-weight: 100;
+}
+
+.material-symbols-outlined {
+    font-size: 70px;
+    color: white;
+    margin-right: 10px;
+    padding-left: 35px;
+}
+
+.menu {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* List items in the navigation bar */
+nav ul li {
+    list-style: none; /* Remove default list styling */
+    display: inline; /* Display list items inline */
+    padding: 35px; /* Add padding to list items */
+}
+
+/* Links in the navigation bar */
+nav ul li a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 25px;
+}
+
+/* Button styles */
+.button {
+    scale: 0.7; /* Scale the button */
+    padding: 0 3em; /* Add padding inside the button */
+    width: 15em; /* Set the width of the button */
+    height: 4em; /* Set the height of the button */
+    background: white; /* Set the background color of the button */
+    color: black; /* Set the text color of the button */
+    border: none; /* Remove border */
+    border-radius: 2em; /* Round the corners of the button */
+    font-size: 1.25em; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1; /* Set z-index for stacking order */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Button hover effect */
+.button:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+/* Button hover effect with pseudo-element */
+.button:hover:after {
+    content: ""; /* Add empty content */
+    background: #007185; /* Set background color to black */
+    position: absolute; /* Position absolutely */
+    z-index: -1; /* Set z-index for stacking order */
+    left: -20%; /* Position 20% to the left */
+    right: -20%; /* Position 20% to the right */
+    top: 0; /* Position at the top */
+    bottom: 0; /* Position at the bottom */
+    transform: skewX(-45deg) scale(0, 1); /* Skew and scale the element */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+/* Button hover effect with pseudo-element transition */
+.button:hover:after {
+    transform: skewX(-45deg) scale(1, 1); /* Skew and scale the element on hover */
+    -webkit-transition: all 0.5s; /* Add transition effect for WebKit browsers */
+    transition: all 0.5s; /* Add transition effect */
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/photo-1488278905738-514111aa236c.avif);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.terminology-table h1 {
+    background-color: #F1E6D7;
+    color: #F1E6D7;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 65px;
+    text-align: center;
+    padding: 20px 10px;
+    width: 900px;
+    height: auto;
+    border-radius: 50px;
+    background-color: #00394f;
+    letter-spacing: 0.025em;
+    font-weight: 100;
+    scale: 0.8;
+    transform: translate(0, 50%);
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    margin-bottom: 80px;
+}
+
+.terminology-table {
+    max-width: 80%;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.terminology-table .parent-tab {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.18);
+}
+
+.terminology-table .parent-tab label, 
+.terminology-table .child-tab label {
+    background: #00394f;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+}
+
+.terminology-table label span {
+    color: #F1E6D7;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #00394f;
+
+}
+
+.child-tab label span {
+   font-size: 17px; 
+}
+
+.terminology-table label .icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    color: #F1E6D7;
+    font-size: 15px;
+    display: block;
+    background: #00394f;
+    border-radius: 50%;
+    text-shadow: 0 -1px 1px #00394f;
+}
+
+.terminology-table label .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.terminology-table .parent-tab .content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+} 
+
+.parent-tab input:checked ~ .content {
+    max-height: 100vh;
+}
+
+.terminology-table .parent-tab .content p {
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.terminology-table input {
+    display: none;
+}
+
+.parent-tab input:checked ~ label .icon i:before {
+    content: '\f068';
+}
