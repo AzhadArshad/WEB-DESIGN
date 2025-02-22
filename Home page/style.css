@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box; /* Ensures consistent sizing */
 }
+
 /* Nav Bar styles */
 nav {
     display: flex;
@@ -11,25 +12,28 @@ nav {
     align-items: center;
     height: 120px; /* Set the height of the navigation bar */
     background-color: #0f1111; /* Set the background color of the navigation bar */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
-    color: white; /* Set the text color to white */
-    letter-spacing: 0.1em; /* Set the letter spacing */
-    padding-left: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family */
+    color: white; /* Set the text color */
+    letter-spacing: 0.1em; /* Add spacing between letters */
+    padding: 10px 20px; /* Fixed padding */
 }
 
+/* Icon section */
 .icon {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
 }
 
+/* Heading inside the nav */
 nav h2 {
-    padding-left: 10px; /* Add padding to the heading */
+    padding-left: 10px;
     font-size: 40px;
     margin-right: 20px;
-    color: white; 
+    color: white;
     font-weight: 100;
 }
 
+/* Google Material Icon */
 .material-symbols-outlined {
     font-size: 70px;
     color: white;
@@ -37,26 +41,36 @@ nav h2 {
     padding-left: 35px;
 }
 
+/* Menu section */
 .menu {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Align menu to the right */
 }
 
 /* List items in the navigation bar */
-nav ul li {
+nav ul {
+    display: flex;
     list-style: none; /* Remove default list styling */
-    display: inline; /* Display list items inline */
-    padding: 35px; /* Add padding to list items */
+}
+
+nav ul li {
+    display: inline-block; /* Allows proper padding/margins */
+    padding: 0 25px; /* Adjusted padding */
 }
 
 /* Links in the navigation bar */
 nav ul li a {
-    color: white; /* Set link color to white */
-    text-decoration: none; /* Remove underline from links */
+    color: white;
+    text-decoration: none;
     font-size: 25px;
+    transition: 0.3s; /* Smooth hover effect */
 }
 
-
+/* Hover effect */
+nav ul li a:hover {
+    color: #ff9900; /* Change color on hover */
+}
 
 
 /* Button styles */
@@ -78,13 +92,13 @@ nav ul li a {
 
 /* Button hover effect */
 .button:hover {
-    color: white; /* Change text color to white on hover */
+    color: white; /* Change text color to black on hover */
 }
 
 /* Button hover effect with pseudo-element */
-.button:hover:after {
+.button:after {
     content: ""; /* Add empty content */
-    background: #007185; /* Set background color to black */
+    background: #007185; /* Set background color to white */
     position: absolute; /* Position absolutely */
     z-index: -1; /* Set z-index for stacking order */
     left: -20%; /* Position 20% to the left */
@@ -140,9 +154,11 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     padding: 0;
+    margin-left: 20px;
+    margin-right: 18px;
     scale: 1;
-    width: 6.5em; /* Set the width of the button */
-    height: 2em; /* Set the height of the button */
+    width: 10em; /* Set the width of the button */
+    height: 3em; /* Set the height of the button */
     background: black; /* Set the background color of the button */
     color: white; /* Set the text color of the button */
     border: none; /* Remove border */
@@ -184,31 +200,12 @@ nav ul li a {
 }
 
 /* Footer styles */
+/* Footer styles */
 footer {
     background: radial-gradient(circle, #222, #000); /* Set background color */
     color: white; /* Set text color */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
 }
 
-footer h1 h2 h3 {
-    font-weight: 10px !important;
-    letter-spacing: 0.5;
-}
-
-.material-symbols-outlined {
-    font-size: 100px !important;
-    color: white;
-    margin-right: 10px;
-    padding-left: 35px;
-    padding-right: 20px;
-    margin-top: -10px;
-}
 
 /* Unordered list styles */
 ul {
@@ -220,6 +217,7 @@ ul {
     height: 200px; /* Set height */
     display: flex;  /* Enables flexbox */
     justify-content: center; /* Centers the divs horizontally */
+    
 
 }
 .foot-box1{ 
@@ -227,8 +225,6 @@ ul {
     display: flex;
     justify-content: center;
     padding-top: 40px;
-    font-weight: lighter;
-    letter-spacing: 0.1em;
 
 }
 .foot-box2{ 
@@ -238,9 +234,6 @@ ul {
     flex-direction: column;
     padding-left: 40px;
     font-size: small;
-    align-items: center;
-    text-align: center;
-    font-family: "Poppins", serif !important;
 }
 .foot-box3{ 
     width: 25%;
@@ -249,7 +242,6 @@ ul {
     flex-direction: column;
     padding-left: 40px;
     font-size: small;
-    font-family: "Poppins", serif !important;
 }
 .foot-box4{ 
     width: 25%;
@@ -258,8 +250,8 @@ ul {
     flex-direction: column;
     padding-left: 40px;
     font-size: small;
-    font-family: "Poppins", serif !important;
 }
+
 
 
 /* Pages section styles */

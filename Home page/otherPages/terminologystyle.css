@@ -15,9 +15,7 @@ nav {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
     color: white; /* Set the text color to white */
     letter-spacing: 0.1em; /* Set the letter spacing */
-    padding-left: 10px 20px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding: 10px 20px; /* Fixed padding */
 }
 
 .icon {
@@ -43,13 +41,18 @@ nav h2 {
 .menu {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
+    margin-left: auto; /* Align menu to the right */
 }
 
 /* List items in the navigation bar */
-nav ul li {
+nav ul {
+    display: flex;
     list-style: none; /* Remove default list styling */
-    display: inline; /* Display list items inline */
-    padding: 35px; /* Add padding to list items */
+}
+
+nav ul li {
+    display: inline-block; /* Display list items inline */
+    padding: 0 25px; /* Add padding to list items */
 }
 
 /* Links in the navigation bar */
@@ -57,6 +60,12 @@ nav ul li a {
     color: white; /* Set link color to white */
     text-decoration: none; /* Remove underline from links */
     font-size: 25px;
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: #ff9900; /* Change color on hover */
 }
 
 /* Button styles */
@@ -107,7 +116,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(./images/photo-1488278905738-514111aa236c.avif);
+    background-image: url(../images/photo-1488278905738-514111aa236c.avif);
 }
 
 body {
@@ -221,31 +230,12 @@ body {
 }
 
 /* Footer styles */
+/* Footer styles */
 footer {
     background: radial-gradient(circle, #222, #000); /* Set background color */
     color: white; /* Set text color */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
 }
 
-footer h1 h2 h3 {
-    font-weight: 10px !important;
-    letter-spacing: 0.5;
-}
-
-.material-symbols-outlined {
-    font-size: 100px !important;
-    color: white;
-    margin-right: 10px;
-    padding-left: 35px;
-    padding-right: 20px;
-    margin-top: -10px;
-}
 
 /* Unordered list styles */
 ul {
@@ -257,6 +247,7 @@ ul {
     height: 200px; /* Set height */
     display: flex;  /* Enables flexbox */
     justify-content: center; /* Centers the divs horizontally */
+    
 
 }
 .foot-box1{ 
@@ -264,8 +255,6 @@ ul {
     display: flex;
     justify-content: center;
     padding-top: 40px;
-    font-weight: lighter;
-    letter-spacing: 0.1em;
 
 }
 .foot-box2{ 
@@ -275,9 +264,6 @@ ul {
     flex-direction: column;
     padding-left: 40px;
     font-size: small;
-    align-items: center;
-    text-align: center;
-    font-family: "Poppins", serif !important;
 }
 .foot-box3{ 
     width: 25%;
@@ -286,7 +272,6 @@ ul {
     flex-direction: column;
     padding-left: 40px;
     font-size: small;
-    font-family: "Poppins", serif !important;
 }
 .foot-box4{ 
     width: 25%;
@@ -295,8 +280,8 @@ ul {
     flex-direction: column;
     padding-left: 40px;
     font-size: small;
-    font-family: "Poppins", serif !important;
 }
+
 
 
 /* Pages section styles */
