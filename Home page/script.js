@@ -1,6 +1,6 @@
 new Swiper('.card-wrapper', {
     loop: true,
-    spaceBetween: 30, 
+    spaceBetween: 40, 
   
     // Pagination bullets
     pagination: {
@@ -10,7 +10,7 @@ new Swiper('.card-wrapper', {
     },
   
     // Navigation arrows
-    navigation: {
+    navigation : {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
@@ -28,4 +28,11 @@ new Swiper('.card-wrapper', {
         },
     }
   });
+
+  document.querySelectorAll('.card-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent interference from other event listeners
+    });
+});
+
 

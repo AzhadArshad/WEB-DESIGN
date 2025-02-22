@@ -1,6 +1,8 @@
+/* Reset margin and padding for all elements and set box-sizing to border-box for consistent sizing */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
 }
 
 /* Nav Bar styles */
@@ -8,12 +10,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 130px; /* Set the height of the navigation bar */
+    height: 120px; /* Set the height of the navigation bar */
     background-color: #0f1111; /* Set the background color of the navigation bar */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set the font family for the navigation bar */
     color: white; /* Set the text color to white */
     letter-spacing: 0.1em; /* Set the letter spacing */
     padding-left: 10px 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .icon {
@@ -30,7 +34,7 @@ nav h2 {
 }
 
 .material-symbols-outlined {
-    font-size: 100px !important;
+    font-size: 70px;
     color: white;
     margin-right: 10px;
     padding-left: 35px;
@@ -98,126 +102,122 @@ nav ul li a {
     transition: all 0.5s; /* Add transition effect */
 }
 
-.map-container {
+.main {
+    min-height: 100vh;
     display: flex;
-    justify-content: center; /*Center horizontally*/
-    align-items: center; /*Center vertically*/
-    height: auto; /*Full height of browser*/
-    width: 100%; /*Full width of browser*/
-    max-width: 100vw; 
-    overflow: hidden;
-    position: relative;
-    margin: auto;
-    margin-bottom: 70px;
-    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/photo-1488278905738-514111aa236c.avif);
 }
 
 body {
-    background-color: #01171b;
+    min-height: 100vh;
 }
 
-svg {
-    max-width: 100%; /*Prevents overflow*/
-    max-height: auto;
-    position: relative;
-}
-
-svg path {
-    fill: #00394f;
-    stroke: #eee;
-    stroke-width: .25;
-}
-
-svg path:hover {
-    fill: #006284;
-    transition: 0.6s;
-    cursor: pointer;
-    cursor: pointer;
-}
-
-.title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Set font family */
-    font-size: 5em; /* Set font size */
-    font-weight: 100;
+.terminology-table h1 {
+    background-color: #F1E6D7;
     color: #F1E6D7;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 65px;
+    text-align: center;
+    padding: 20px 10px;
+    width: 900px;
+    height: auto;
+    border-radius: 50px;
+    background-color: #00394f;
+    letter-spacing: 0.025em;
+    font-weight: 100;
+    scale: 0.8;
+    transform: translate(0, 50%);
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    margin-bottom: 80px;
 }
 
-.pin {
-    background: #4362f8;
-    position: absolute;
-    width: 0.7em;
-    height: 0.7em;
+.terminology-table {
+    max-width: 80%;
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: "Poppins", serif;
+}
+
+.terminology-table .parent-tab {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.18);
+}
+
+.terminology-table .parent-tab label, 
+.terminology-table .child-tab label {
+    background: #00394f;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+    font-weight: 100;
+}
+
+.terminology-table label span {
+    color: #F1E6D7;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #00394f;
+
+}
+
+.child-tab label span {
+   font-size: 17px; 
+}
+
+.terminology-table label .icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    color: #F1E6D7;
+    font-size: 15px;
+    display: block;
+    background: #00394f;
     border-radius: 50%;
+    text-shadow: 0 -1px 1px #00394f;
 }
 
-.pin::before {
-    content: '';
-    background: #4362f8;
+.terminology-table label .icon i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation: pulse 1.3s ease-in-out infinite;
 }
 
-.pin span {
-    display: inline-block;
-    white-space: nowrap;
-    position: absolute;
-    left: 1.5em;
-    top: 50%;
-    transform: translate(-50%);
-    background: #fff;
-    border-radius: 3em;
-    padding: 0.3em 0.6em;
-    font-size: 0.9em;
-    color: #007185;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    cursor: pointer;
-    transition: 0.4s ease;
+.terminology-table .parent-tab .content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+} 
+
+.parent-tab input:checked ~ .content {
+    max-height: 100vh;
 }
 
-.pin span:hover {
-    color: white;
-    background: #007185;
+.terminology-table .parent-tab .content p {
+    font-size: 16px;
+    padding: 15px 20px;
 }
 
-.cork {
-    top: 89%;
-    left: 59%;
+.terminology-table input {
+    display: none;
 }
 
-.dublin {
-    top: 53%;
-    left: 73.5%;
-}
-
-.sligo {
-    top: 31%;
-    left: 57.5%;
-}
-
-.waterford {
-    top: 80%;
-    left: 68.5%;
-}
-
-.limerick {
-    top: 69%;
-    left: 56%;
-}
-
-.belfast {
-    top: 21%;
-    left: 75.5%;
-}
-
-.l-derry {
-    top: 10%;
-    left: 66.25%;
+.parent-tab input:checked ~ label .icon i:before {
+    content: '\f068';
 }
 
 /* Footer styles */
